@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "ServicesGridSeccion": {
+      "type": "component",
+      "component": "shared.services-grid-section",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
