@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_buttons_dropdown_buttons",
+  "info": {
+    "displayName": "dropdownButton"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "isOnPage": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "href": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

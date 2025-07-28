@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_buttons_navbar_buttons",
+  "info": {
+    "displayName": "navbarButton"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

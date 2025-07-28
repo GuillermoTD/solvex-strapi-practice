@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_buttons_theme_toggles",
+  "info": {
+    "displayName": "themeToggle"
+  },
+  "options": {},
+  "attributes": {
+    "darkMode": {
+      "type": "boolean"
+    },
+    "darkIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "lightIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

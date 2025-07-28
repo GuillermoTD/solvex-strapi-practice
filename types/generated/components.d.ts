@@ -1,5 +1,49 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ButtonsDropdownButton extends Struct.ComponentSchema {
+  collectionName: 'components_buttons_dropdown_buttons';
+  info: {
+    displayName: 'dropdownButton';
+  };
+  attributes: {
+    href: Schema.Attribute.Text;
+    isOnPage: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ButtonsNavbarButton extends Struct.ComponentSchema {
+  collectionName: 'components_buttons_navbar_buttons';
+  info: {
+    displayName: 'navbarButton';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ButtonsThemeToggle extends Struct.ComponentSchema {
+  collectionName: 'components_buttons_theme_toggles';
+  info: {
+    displayName: 'themeToggle';
+  };
+  attributes: {
+    darkIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    darkMode: Schema.Attribute.Boolean;
+    lightIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ImagesIcon extends Struct.ComponentSchema {
+  collectionName: 'components_images_icons';
+  info: {
+    displayName: 'icon';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedHeroSliderSeccion extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_slider_seccions';
   info: {
@@ -27,17 +71,14 @@ export interface SharedNavbar extends Struct.ComponentSchema {
     displayName: 'Navbar';
   };
   attributes: {
-    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Navbar_Link: Schema.Attribute.Component<'shared.navbar-items', false>;
+    buttons: Schema.Attribute.Component<'buttons.navbar-button', true>;
+    dropdownButtons: Schema.Attribute.Component<
+      'buttons.dropdown-button',
+      true
+    >;
+    logo: Schema.Attribute.Component<'images.icon', false>;
+    themeToggle: Schema.Attribute.Component<'buttons.theme-toggle', false>;
   };
-}
-
-export interface SharedNavbarItems extends Struct.ComponentSchema {
-  collectionName: 'components_shared_navbar_items';
-  info: {
-    displayName: 'Navbar_Items';
-  };
-  attributes: {};
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -102,10 +143,13 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'buttons.dropdown-button': ButtonsDropdownButton;
+      'buttons.navbar-button': ButtonsNavbarButton;
+      'buttons.theme-toggle': ButtonsThemeToggle;
+      'images.icon': ImagesIcon;
       'shared.hero-slider-seccion': SharedHeroSliderSeccion;
       'shared.media': SharedMedia;
       'shared.navbar': SharedNavbar;
-      'shared.navbar-items': SharedNavbarItems;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

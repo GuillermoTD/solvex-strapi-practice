@@ -5,19 +5,24 @@
   },
   "options": {},
   "attributes": {
-    "Logo": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "Navbar_Link": {
+    "logo": {
       "type": "component",
-      "component": "shared.navbar-items",
+      "component": "images.icon",
+      "repeatable": false
+    },
+    "dropdownButtons": {
+      "type": "component",
+      "component": "buttons.dropdown-button",
+      "repeatable": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "buttons.navbar-button",
+      "repeatable": true
+    },
+    "themeToggle": {
+      "type": "component",
+      "component": "buttons.theme-toggle",
       "repeatable": false
     }
   },
