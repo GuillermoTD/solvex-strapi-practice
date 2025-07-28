@@ -27,11 +27,17 @@ export interface SharedNavbar extends Struct.ComponentSchema {
     displayName: 'Navbar';
   };
   attributes: {
-    ServicesGridSeccion: Schema.Attribute.Component<
-      'shared.services-grid-section',
-      true
-    >;
+    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Navbar_Link: Schema.Attribute.Component<'shared.navbar-items', false>;
   };
+}
+
+export interface SharedNavbarItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_navbar_items';
+  info: {
+    displayName: 'Navbar_Items';
+  };
+  attributes: {};
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -99,6 +105,7 @@ declare module '@strapi/strapi' {
       'shared.hero-slider-seccion': SharedHeroSliderSeccion;
       'shared.media': SharedMedia;
       'shared.navbar': SharedNavbar;
+      'shared.navbar-items': SharedNavbarItems;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

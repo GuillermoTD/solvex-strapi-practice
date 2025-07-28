@@ -14,7 +14,7 @@
     "Section": {
       "type": "dynamiczone",
       "components": [
-        "shared.hero-slider-seccion"
+        "shared.navbar"
       ]
     }
   }

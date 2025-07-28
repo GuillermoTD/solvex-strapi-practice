@@ -5,10 +5,20 @@
   },
   "options": {},
   "attributes": {
-    "ServicesGridSeccion": {
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Navbar_Link": {
       "type": "component",
-      "component": "shared.services-grid-section",
-      "repeatable": true
+      "component": "shared.navbar-items",
+      "repeatable": false
     }
   },
   "config": {}
