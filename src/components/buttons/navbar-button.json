@@ -7,6 +7,9 @@
   "attributes": {
     "label": {
       "type": "string"
+    },
+    "href": {
+      "type": "string"
     }
   },
   "config": {}

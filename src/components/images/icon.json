@@ -10,10 +10,11 @@
       "multiple": false,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
+    },
+    "href": {
+      "type": "string"
     }
   },
   "config": {}

@@ -14,7 +14,7 @@
       "default": false
     },
     "href": {
-      "type": "text"
+      "type": "string"
     }
   },
   "config": {}

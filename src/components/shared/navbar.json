@@ -1,13 +1,18 @@
 {
   "collectionName": "components_shared_navbars",
   "info": {
-    "displayName": "Navbar"
+    "displayName": "navbar"
   },
   "options": {},
   "attributes": {
-    "logo": {
+    "logoIcon": {
       "type": "component",
       "component": "images.icon",
+      "repeatable": false
+    },
+    "startNavbarButton": {
+      "type": "component",
+      "component": "buttons.navbar-button",
       "repeatable": false
     },
     "dropdownButtons": {
@@ -15,7 +20,7 @@
       "component": "buttons.dropdown-button",
       "repeatable": true
     },
-    "buttons": {
+    "navbarButtons": {
       "type": "component",
       "component": "buttons.navbar-button",
       "repeatable": true

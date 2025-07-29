@@ -6,7 +6,7 @@ export interface ButtonsDropdownButton extends Struct.ComponentSchema {
     displayName: 'dropdownButton';
   };
   attributes: {
-    href: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
     isOnPage: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
   };
@@ -18,6 +18,7 @@ export interface ButtonsNavbarButton extends Struct.ComponentSchema {
     displayName: 'navbarButton';
   };
   attributes: {
+    href: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
 }
@@ -40,7 +41,8 @@ export interface ImagesIcon extends Struct.ComponentSchema {
     displayName: 'icon';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    href: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
   };
 }
 
@@ -68,15 +70,19 @@ export interface SharedMedia extends Struct.ComponentSchema {
 export interface SharedNavbar extends Struct.ComponentSchema {
   collectionName: 'components_shared_navbars';
   info: {
-    displayName: 'Navbar';
+    displayName: 'navbar';
   };
   attributes: {
-    buttons: Schema.Attribute.Component<'buttons.navbar-button', true>;
     dropdownButtons: Schema.Attribute.Component<
       'buttons.dropdown-button',
       true
     >;
-    logo: Schema.Attribute.Component<'images.icon', false>;
+    logoIcon: Schema.Attribute.Component<'images.icon', false>;
+    navbarButtons: Schema.Attribute.Component<'buttons.navbar-button', true>;
+    startNavbarButton: Schema.Attribute.Component<
+      'buttons.navbar-button',
+      false
+    >;
     themeToggle: Schema.Attribute.Component<'buttons.theme-toggle', false>;
   };
 }
