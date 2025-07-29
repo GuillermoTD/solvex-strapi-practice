@@ -1,20 +1,17 @@
 {
-  "collectionName": "components_images_icons",
+  "collectionName": "components_shared_partners_footers",
   "info": {
-    "displayName": "icon"
+    "displayName": "partnersFooter"
   },
   "options": {},
   "attributes": {
-    "image": {
+    "partnerBadges": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files"
       ]
-    },
-    "href": {
-      "type": "string"
     }
   },
   "config": {}

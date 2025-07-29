@@ -10,12 +10,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "Section": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.navbar"
-      ]
-    }
-  }
+  "attributes": {}
 }

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_buttons_image_buttons",
+  "info": {
+    "displayName": "imageButton"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

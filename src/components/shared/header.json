@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_headers",
+  "info": {
+    "displayName": "iconBar"
+  },
+  "options": {},
+  "attributes": {
+    "socialIconButtons": {
+      "type": "component",
+      "component": "buttons.image-button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

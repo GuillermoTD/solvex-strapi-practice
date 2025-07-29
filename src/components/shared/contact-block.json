@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_contact_blocks",
+  "info": {
+    "displayName": "contactBlock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

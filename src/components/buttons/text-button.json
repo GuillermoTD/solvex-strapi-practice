@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_buttons_navbar_buttons",
+  "collectionName": "components_buttons_text_buttons",
   "info": {
-    "displayName": "navbarButton"
+    "displayName": "textButton"
   },
   "options": {},
   "attributes": {

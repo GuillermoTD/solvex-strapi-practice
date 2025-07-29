@@ -5,14 +5,14 @@
   },
   "options": {},
   "attributes": {
-    "logoIcon": {
+    "logoButton": {
       "type": "component",
-      "component": "images.icon",
+      "component": "buttons.image-button",
       "repeatable": false
     },
     "startNavbarButton": {
       "type": "component",
-      "component": "buttons.navbar-button",
+      "component": "buttons.text-button",
       "repeatable": false
     },
     "dropdownButtons": {
@@ -22,7 +22,7 @@
     },
     "navbarButtons": {
       "type": "component",
-      "component": "buttons.navbar-button",
+      "component": "buttons.text-button",
       "repeatable": true
     },
     "themeToggle": {
