@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_enterprise_products",
+  "info": {
+    "displayName": "enterpriseProducts"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "productCards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

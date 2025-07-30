@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_enterprise_services",
+  "info": {
+    "displayName": "enterpriseServices"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "serviceButton": {
+      "type": "component",
+      "component": "buttons.image-button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

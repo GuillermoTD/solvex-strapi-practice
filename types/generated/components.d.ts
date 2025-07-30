@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ButtonsButton extends Struct.ComponentSchema {
+  collectionName: 'components_buttons_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface ButtonsDropdownButton extends Struct.ComponentSchema {
   collectionName: 'components_buttons_dropdown_buttons';
   info: {
@@ -46,6 +57,19 @@ export interface ButtonsThemeToggle extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'buttons.button', false>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedContactBlock extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_blocks';
   info: {
@@ -59,6 +83,30 @@ export interface SharedContactBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedEnterpriseProducts extends Struct.ComponentSchema {
+  collectionName: 'components_shared_enterprise_products';
+  info: {
+    displayName: 'enterpriseProducts';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    productCards: Schema.Attribute.Component<'shared.card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedEnterpriseServices extends Struct.ComponentSchema {
+  collectionName: 'components_shared_enterprise_services';
+  info: {
+    displayName: 'enterpriseServices';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    serviceButton: Schema.Attribute.Component<'buttons.image-button', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: 'components_shared_footers';
   info: {
@@ -67,10 +115,7 @@ export interface SharedFooter extends Struct.ComponentSchema {
   attributes: {
     contactBlocks: Schema.Attribute.Component<'shared.contact-block', true>;
     footerBlocks: Schema.Attribute.Component<'shared.footer-block', true>;
-<<<<<<< HEAD
-=======
     footerButtons: Schema.Attribute.Component<'buttons.text-button', true>;
->>>>>>> edgar-branch-strapi
     socialIconsBar: Schema.Attribute.Component<'shared.header', false>;
   };
 }
@@ -216,11 +261,15 @@ export interface SharedSliderBox extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'buttons.button': ButtonsButton;
       'buttons.dropdown-button': ButtonsDropdownButton;
       'buttons.image-button': ButtonsImageButton;
       'buttons.text-button': ButtonsTextButton;
       'buttons.theme-toggle': ButtonsThemeToggle;
+      'shared.card': SharedCard;
       'shared.contact-block': SharedContactBlock;
+      'shared.enterprise-products': SharedEnterpriseProducts;
+      'shared.enterprise-services': SharedEnterpriseServices;
       'shared.footer': SharedFooter;
       'shared.footer-block': SharedFooterBlock;
       'shared.header': SharedHeader;

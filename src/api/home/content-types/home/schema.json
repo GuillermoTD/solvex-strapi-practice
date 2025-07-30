@@ -11,33 +11,23 @@
   },
   "pluginOptions": {},
   "attributes": {
-<<<<<<< HEAD
     "banner": {
-=======
-    "bannerHome": {
->>>>>>> d6cf0bcbec6d55d0886a927bc520e6977847c5b9
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images",
-<<<<<<< HEAD
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
     },
-    "slider": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-=======
-        "files"
->>>>>>> d6cf0bcbec6d55d0886a927bc520e6977847c5b9
-      ]
+    "enterpriseServices": {
+      "type": "component",
+      "component": "shared.enterprise-services",
+      "repeatable": false
+    },
+    "enterpriseProducts": {
+      "type": "component",
+      "component": "shared.enterprise-products",
+      "repeatable": false
     }
   }
 }
