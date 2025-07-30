@@ -98,6 +98,7 @@ export interface SharedHeroSliderSeccion extends Struct.ComponentSchema {
   };
   attributes: {
     images: Schema.Attribute.Media<'images' | 'files', true>;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -198,6 +199,14 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSliderBox extends Struct.ComponentSchema {
+  collectionName: 'components_shared_slider_boxes';
+  info: {
+    displayName: 'SliderBox';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -218,6 +227,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.services-grid-section': SharedServicesGridSection;
       'shared.slider': SharedSlider;
+      'shared.slider-box': SharedSliderBox;
     }
   }
 }

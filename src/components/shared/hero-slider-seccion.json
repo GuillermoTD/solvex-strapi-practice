@@ -13,6 +13,9 @@
         "images",
         "files"
       ]
+    },
+    "text": {
+      "type": "string"
     }
   },
   "config": {}
