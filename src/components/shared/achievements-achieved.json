@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_achievements_achieveds",
+  "info": {
+    "displayName": "Achievements Achieved"
+  },
+  "options": {},
+  "attributes": {
+    "achivementItems": {
+      "type": "component",
+      "component": "shared.achivement-items",
+      "repeatable": true
+    },
+    "achivementStatistics": {
+      "type": "component",
+      "component": "shared.achivements-statistics",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

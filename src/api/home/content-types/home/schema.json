@@ -28,6 +28,12 @@
       "type": "component",
       "component": "shared.enterprise-products",
       "repeatable": false
+    },
+    "achievementsAchieved": {
+      "type": "component",
+      "component": "shared.achievements-achieved",
+      "repeatable": false,
+      "required": false
     }
   }
 }

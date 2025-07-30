@@ -486,6 +486,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    achievementsAchieved: Schema.Attribute.Component<
+      'shared.achievements-achieved',
+      false
+    >;
     banner: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_achivements_statistics",
+  "info": {
+    "displayName": "achivementsStatistics"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

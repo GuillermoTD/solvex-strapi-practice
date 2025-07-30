@@ -58,6 +58,45 @@ export interface ButtonsThemeToggle extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAchievementsAchieved extends Struct.ComponentSchema {
+  collectionName: 'components_shared_achievements_achieveds';
+  info: {
+    displayName: 'Achievements Achieved';
+  };
+  attributes: {
+    achivementItems: Schema.Attribute.Component<
+      'shared.achivement-items',
+      true
+    >;
+    achivementStatistics: Schema.Attribute.Component<
+      'shared.achivements-statistics',
+      true
+    >;
+  };
+}
+
+export interface SharedAchivementItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_achivement_items';
+  info: {
+    displayName: 'AchivementItems';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface SharedAchivementsStatistics extends Struct.ComponentSchema {
+  collectionName: 'components_shared_achivements_statistics';
+  info: {
+    displayName: 'achivementsStatistics';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    Label: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_cards';
   info: {
@@ -267,6 +306,9 @@ declare module '@strapi/strapi' {
       'buttons.image-button': ButtonsImageButton;
       'buttons.text-button': ButtonsTextButton;
       'buttons.theme-toggle': ButtonsThemeToggle;
+      'shared.achievements-achieved': SharedAchievementsAchieved;
+      'shared.achivement-items': SharedAchivementItems;
+      'shared.achivements-statistics': SharedAchivementsStatistics;
       'shared.card': SharedCard;
       'shared.contact-block': SharedContactBlock;
       'shared.enterprise-products': SharedEnterpriseProducts;
