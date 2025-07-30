@@ -486,6 +486,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    bannerHome: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

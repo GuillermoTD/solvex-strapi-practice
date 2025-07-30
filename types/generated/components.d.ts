@@ -67,6 +67,8 @@ export interface SharedFooter extends Struct.ComponentSchema {
   attributes: {
     contactBlocks: Schema.Attribute.Component<'shared.contact-block', true>;
     footerBlocks: Schema.Attribute.Component<'shared.footer-block', true>;
+    footerButtons: Schema.Attribute.Component<'buttons.text-button', true>;
+    socialIconsBar: Schema.Attribute.Component<'shared.header', false>;
   };
 }
 
@@ -76,8 +78,8 @@ export interface SharedFooterBlock extends Struct.ComponentSchema {
     displayName: 'footerBlock';
   };
   attributes: {
-    footerButtons: Schema.Attribute.Component<'buttons.text-button', true>;
-    Title: Schema.Attribute.String;
+    blockButtons: Schema.Attribute.Component<'buttons.text-button', true>;
+    titleButton: Schema.Attribute.Component<'buttons.text-button', false>;
   };
 }
 
@@ -88,13 +90,14 @@ export interface SharedHeader extends Struct.ComponentSchema {
   };
   attributes: {
     socialIconButtons: Schema.Attribute.Component<'buttons.image-button', true>;
+    title: Schema.Attribute.String;
   };
 }
 
 export interface SharedHeroSliderSeccion extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_slider_seccions';
   info: {
-    displayName: 'HeroSliderSeccion';
+    displayName: 'heroSlider';
   };
   attributes: {
     images: Schema.Attribute.Media<'images' | 'files', true>;

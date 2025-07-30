@@ -10,5 +10,14 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "bannerHome": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
 }
