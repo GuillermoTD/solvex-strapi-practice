@@ -15,6 +15,11 @@
       "component": "shared.contact-block",
       "repeatable": true
     },
+    "footerButtons": {
+      "type": "component",
+      "component": "buttons.text-button",
+      "repeatable": true
+    },
     "socialIconsBar": {
       "type": "component",
       "component": "shared.header",

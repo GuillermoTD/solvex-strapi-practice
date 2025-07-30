@@ -67,6 +67,10 @@ export interface SharedFooter extends Struct.ComponentSchema {
   attributes: {
     contactBlocks: Schema.Attribute.Component<'shared.contact-block', true>;
     footerBlocks: Schema.Attribute.Component<'shared.footer-block', true>;
+<<<<<<< HEAD
+=======
+    footerButtons: Schema.Attribute.Component<'buttons.text-button', true>;
+>>>>>>> edgar-branch-strapi
     socialIconsBar: Schema.Attribute.Component<'shared.header', false>;
   };
 }
@@ -96,7 +100,7 @@ export interface SharedHeader extends Struct.ComponentSchema {
 export interface SharedHeroSliderSeccion extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_slider_seccions';
   info: {
-    displayName: 'HeroSliderSeccion';
+    displayName: 'heroSlider';
   };
   attributes: {
     images: Schema.Attribute.Media<'images' | 'files', true>;
