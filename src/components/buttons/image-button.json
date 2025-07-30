@@ -15,6 +15,9 @@
     },
     "href": {
       "type": "string"
+    },
+    "label": {
+      "type": "string"
     }
   },
   "config": {}

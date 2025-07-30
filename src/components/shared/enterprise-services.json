@@ -11,7 +11,7 @@
     "description": {
       "type": "text"
     },
-    "serviceButton": {
+    "serviceButtons": {
       "type": "component",
       "component": "buttons.image-button",
       "repeatable": true

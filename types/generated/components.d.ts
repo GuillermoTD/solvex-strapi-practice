@@ -31,6 +31,7 @@ export interface ButtonsImageButton extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
   };
 }
 
@@ -102,7 +103,7 @@ export interface SharedEnterpriseServices extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    serviceButton: Schema.Attribute.Component<'buttons.image-button', true>;
+    serviceButtons: Schema.Attribute.Component<'buttons.image-button', true>;
     title: Schema.Attribute.String;
   };
 }
