@@ -5,10 +5,12 @@
   },
   "options": {},
   "attributes": {
-    "Title": {
-      "type": "string"
+    "titleButton": {
+      "type": "component",
+      "component": "buttons.text-button",
+      "repeatable": false
     },
-    "footerButtons": {
+    "blockButtons": {
       "type": "component",
       "component": "buttons.text-button",
       "repeatable": true
