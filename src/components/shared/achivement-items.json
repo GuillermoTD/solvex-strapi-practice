@@ -1,7 +1,7 @@
 {
   "collectionName": "components_shared_achivement_items",
   "info": {
-    "displayName": "AchivementItems"
+    "displayName": "achievementItems"
   },
   "options": {},
   "attributes": {
@@ -15,7 +15,10 @@
         "audios"
       ]
     },
-    "label": {
+    "description": {
+      "type": "string"
+    },
+    "statistic": {
       "type": "string"
     }
   },

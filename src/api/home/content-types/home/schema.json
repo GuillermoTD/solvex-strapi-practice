@@ -29,7 +29,7 @@
       "component": "shared.enterprise-products",
       "repeatable": false
     },
-    "achievementsAchieved": {
+    "achievements": {
       "type": "component",
       "component": "shared.achievements-achieved",
       "repeatable": false,

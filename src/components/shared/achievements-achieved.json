@@ -1,18 +1,16 @@
 {
   "collectionName": "components_shared_achievements_achieveds",
   "info": {
-    "displayName": "Achievements Achieved"
+    "displayName": "achievements"
   },
   "options": {},
   "attributes": {
-    "achivementItems": {
+    "title": {
+      "type": "string"
+    },
+    "achievementItems": {
       "type": "component",
       "component": "shared.achivement-items",
-      "repeatable": true
-    },
-    "achivementStatistics": {
-      "type": "component",
-      "component": "shared.achivements-statistics",
       "repeatable": true
     }
   },

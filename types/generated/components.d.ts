@@ -61,35 +61,33 @@ export interface ButtonsThemeToggle extends Struct.ComponentSchema {
 export interface SharedAchievementsAchieved extends Struct.ComponentSchema {
   collectionName: 'components_shared_achievements_achieveds';
   info: {
-    displayName: 'Achievements Achieved';
+    displayName: 'achievements';
   };
   attributes: {
-    achivementItems: Schema.Attribute.Component<
+    achievementItems: Schema.Attribute.Component<
       'shared.achivement-items',
       true
     >;
-    achivementStatistics: Schema.Attribute.Component<
-      'shared.achivements-statistics',
-      true
-    >;
+    title: Schema.Attribute.String;
   };
 }
 
 export interface SharedAchivementItems extends Struct.ComponentSchema {
   collectionName: 'components_shared_achivement_items';
   info: {
-    displayName: 'AchivementItems';
+    displayName: 'achievementItems';
   };
   attributes: {
+    description: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    label: Schema.Attribute.String;
+    statistic: Schema.Attribute.String;
   };
 }
 
 export interface SharedAchivementsStatistics extends Struct.ComponentSchema {
   collectionName: 'components_shared_achivements_statistics';
   info: {
-    displayName: 'achivementsStatistics';
+    displayName: 'achievementsStatistics';
   };
   attributes: {
     description: Schema.Attribute.String;
